@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.slider {
+  width: 90%;
+  height: 70vh;
+  margin: 48px auto;
+  overflow: hidden;
+  display: flex;
+  gap: 16px;
+}
+
+.slider div {
+  flex: 1;
+  height: 100%;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.slider div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.slider div span {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: rotateZ(-90deg);
+  transform-origin: left;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  letter-spacing: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.active {
+  flex: 7 !important;
+}
+.active span {
+  transform: none !important;
+  left: 5% !important;
+}
